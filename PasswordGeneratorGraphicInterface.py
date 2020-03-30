@@ -1,5 +1,5 @@
 #_[N_F]_
-from tkinter import *
+from tkinter import Tk, Button, Label, Checkbutton, Entry, IntVar
 from random import randrange
 from clipboard import copy
 
@@ -34,10 +34,10 @@ def click():
     if alphabet == []:
         alphabet.insert(1, alphaA)
     for i in range(password):
-        P1 = randrange(0, len(alphabet))
-        L2 = alphabet[P1]
-        P2 = randrange(0, len(L2))
-        final += L2[P2]
+        step1 = randrange(0, len(alphabet))
+        step2 = alphabet[step1]
+        step3 = randrange(0, len(step2))
+        final += step2[step3]
     label['text'] = final
 
 
