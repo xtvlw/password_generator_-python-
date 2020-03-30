@@ -1,18 +1,19 @@
 #_[N_F]_
-import random
+
+from random import randrange
 
 alphaA = '0123456789'
 alphaB = 'abcdefghijklmnopqrstuvwxyz'
 alphaC = alphaB.upper()
 alphabet = [alphaA, alphaB, alphaC]
 final = ''
-L = int(input('len password : '))
+Length = int(input('len password : '))
 
-for i in range(L):
-    P1 = random.randrange(0, len(alphabet))
-    L2 = alphabet[P1]
-    P2 = random.randrange(0, len(L2))
-    final += L2[P2]
+for i in range(Length):
+    step1 = randrange(0, len(alphabet))
+    step2 = alphabet[step1]
+    step3 = randrange(0, len(step2))
+    final += step2[step3]
 
 print(final)
     
