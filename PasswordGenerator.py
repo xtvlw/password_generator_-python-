@@ -1,19 +1,20 @@
 #_[N_F]_
+from random import choice
 
-from random import randrange
 
-alphaA = '0123456789'
-alphaB = 'abcdefghijklmnopqrstuvwxyz'
+alphaA = "0123456789"
+alphaB = "abcdefghijklmnopqrstuvwxyz"
 alphaC = alphaB.upper()
-alphabet = [alphaA, alphaB, alphaC]
-final = ''
-Length = int(input('len password : '))
 
-for i in range(Length):
-    step1 = randrange(0, len(alphabet))
-    step2 = alphabet[step1]
-    step3 = randrange(0, len(step2))
-    final += step2[step3]
+characters = [alphaA + alphaB + alphaC]
 
-print(final)
+length = int(input("\nPassword length: "))
+
+password = ""
+
+for l in range(length):
+    for c in characters:
+        password += choice(c)
+
+print(password)
     
